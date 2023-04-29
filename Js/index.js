@@ -21,6 +21,20 @@ const hideBox = document.getElementById('hide')
 const serachInput = document.getElementById('searchBar')
 
 
+///////////////////////--------------------------------------
+
+// qayleri hertakanutyun
+// <ul>
+//   <li><span>bookname(value)</span></li>
+//   <li><span>delete</span></li>
+// </ul>
+
+
+
+
+// stexcel li(list)
+
+//add book functionality
 
 
 
@@ -43,7 +57,23 @@ const handleAddBook = () => {
     addFormInput.value = ''
   }
 
-
-
 }
+
 addButoon.addEventListener('click', handleAddBook)
+
+
+/////----------------------------------------------------
+
+const handleDeleteBook = event => {
+  const { target } = event
+  if (target.className === 'delete') {
+    const li = target.parentElement
+    ulList.removeChild(li)
+    console.log(li);
+  }
+}
+ulList.addEventListener('click', handleDeleteBook)
+
+///----------------------------------------------------
+
+
