@@ -75,5 +75,18 @@ const handleDeleteBook = event => {
 ulList.addEventListener('click', handleDeleteBook)
 
 ///----------------------------------------------------
+//hide functionality
 
+const handleHideBooks = event => {
+  const { target } = event;
+  ulList.style.display = target.checked ? 'none' : 'block';
+  
+  // if (target.checked) {
+  //   ulList.style.display = 'none'
+  // } else{
+  //   ulList.style.display = 'block'
+  // }
+}
+hideBox.addEventListener('input', handleHideBooks)
 
+///------------------------------
